@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>GradPilots Scholarship Finder</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1 class="title">GradPilots Scholarship Finder</h1>
+
+<div class="container">
+
+<div class="filters">
+
+<h3>Filters</h3>
+
+<b>Country</b>
+
+<label><input type="checkbox" value="USA" class="country"> USA</label>
+<label><input type="checkbox" value="UK" class="country"> UK</label>
+<label><input type="checkbox" value="Canada" class="country"> Canada</label>
+<label><input type="checkbox" value="Germany" class="country"> Germany</label>
+<label><input type="checkbox" value="France" class="country"> France</label>
+
+<br>
+
+<b>Stream</b>
+
+<label><input type="checkbox" value="Business" class="stream"> Business</label>
+<label><input type="checkbox" value="Law" class="stream"> Law</label>
+<label><input type="checkbox" value="IR" class="stream"> IR</label>
+<label><input type="checkbox" value="STEM" class="stream"> STEM</label>
+
+<br>
+
+<b>Level</b>
+
+<label><input type="checkbox" value="UG" class="level"> UG</label>
+<label><input type="checkbox" value="PG" class="level"> PG</label>
+<label><input type="checkbox" value="PhD" class="level"> PhD</label>
+
+<br><br>
+
+<button onclick="applyFilters()">Apply</button>
+<button onclick="resetFilters()">Reset</button>
+
+</div>
+
+<div class="content">
+
+<div class="stats">
+
+<div class="stat" id="totalScholarships"></div>
+<div class="stat" id="fullFunding"></div>
+<div class="stat" id="deadlines"></div>
+
+</div>
+
+<div class="controls">
+
+<button onclick="sortBy('amount')">Sort Amount</button>
+<button onclick="sortBy('deadline')">Sort Deadline</button>
+
+</div>
+
+<div id="cards" class="cards"></div>
+
+<button class="loadMore" onclick="loadMore()">Load More</button>
+
+</div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
